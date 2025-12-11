@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master GitHub - The AI Era</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        :root {
+            --ai-primary: #6366f1;
+            --ai-accent: #a855f7;
+            --github-dark: #0d1117;
+            --github-card: #161b22;
+            --github-border: #30363d;
+            --neon-glow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+
+        body {
+            background-color: var(--github-dark);
+            color: #e6edf3;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Abstract Background Mesh */
+        .bg-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.15), transparent 25%);
+            pointer-events: none;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(135deg, #818cf8 0%, #d8b4fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Video Container */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid var(--github-border);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Pricing Card Specifics */
+        .price-badge {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.2), rgba(168, 85, 247, 0.2));
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        /* Professional Tier Glow */
+        .tier-pro {
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            background: linear-gradient(180deg, rgba(22, 27, 34, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tier-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #eab308, transparent);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+
+    <div class="bg-mesh"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-github text-3xl text-white"></i>
+                    <span class="font-bold text-xl tracking-tight">Git<span class="text-indigo-400">Mastery</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#pricing" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition-colors shadow-lg shadow-indigo-500/30">
+                        Start Learning
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+                Why <span class="text-gradient">GitHub</span> Matters
+                <br>in the AI Era.
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                The backbone of modern software. From open source collaboration to AI-driven development with Copilot. If you aren't on GitHub, you don't exist in tech.
+            </p>
+
+            <!-- Video Embed -->
+            <div class="max-w-4xl mx-auto video-wrapper">
+                <!-- Added playsinline=1 for better mobile support -->
+                <iframe 
+                    src="https://www.youtube.com/embed/E3_95BZYIVs?autoplay=1&mute=1&playsinline=1&controls=1&rel=0" 
+                    title="Why GitHub is Important" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid md:grid-cols-3 gap-8 mb-24 mt-20">
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-indigo-900/50 rounded-lg flex items-center justify-center mb-4 text-indigo-400">
+                    <i class="fas fa-code-branch text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Version Control</h3>
+                <p class="text-gray-400 text-sm">Never lose code again. Track every change, experiment with branches, and revert mistakes instantly.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-purple-900/50 rounded-lg flex items-center justify-center mb-4 text-purple-400">
+                    <i class="fas fa-users text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Collaboration</h3>
+                <p class="text-gray-400 text-sm">Work with developers worldwide. Review code, manage projects, and contribute to open source.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl">
+                <div class="w-12 h-12 bg-green-900/50 rounded-lg flex items-center justify-center mb-4 text-green-400">
+                    <i class="fas fa-robot text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">AI Integration</h3>
+                <p class="text-gray-400 text-sm">The home of AI. Host models, use GitHub Copilot to write code faster, and automate workflows.</p>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div id="pricing" class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Choose Your Path</h2>
+            <p class="text-gray-400 mb-12">Master the tool that powers the world's software.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-end">
+                
+                <!-- LITE Plan -->
+                <div class="glass-card rounded-2xl p-8 relative">
+                    <h3 class="text-xl font-semibold text-gray-300 mb-2">LITE</h3>
+                    <div class="flex justify-center items-baseline mb-6">
+                        <span class="text-3xl font-bold">₹200</span>
+                    </div>
+                    <ul class="text-left space-y-4 mb-8 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-500 mr-2"></i> Account Setup & Profile</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-500 mr-2"></i> Git Init, Add, Commit</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-500 mr-2"></i> Push to Repositories</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-500 mr-2"></i> Writing basic READMEs</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border border-gray-600 hover:border-white hover:text-white text-gray-300 font-medium transition-all">
+                        Get Started
+                    </button>
+                </div>
+
+                <!-- MAX Plan -->
+                <div class="glass-card rounded-2xl p-8 relative border-indigo-500/50">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-wider">
+                        POPULAR
+                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-2">MAX</h3>
+                    <div class="flex justify-center items-baseline mb-6">
+                        <span class="text-4xl font-bold">₹1000</span>
+                    </div>
+                    <ul class="text-left space-y-4 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> <span class="font-bold text-white">Everything in LITE</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Branching Strategies</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Pull Requests & Reviews</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Merge Conflict Resolution</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> GitHub Pages Hosting</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold shadow-lg shadow-indigo-500/25 transition-all">
+                        Join Max
+                    </button>
+                </div>
+
+                <!-- PROFESSIONAL Plan -->
+                <div class="glass-card tier-pro rounded-2xl p-8 relative">
+                    <h3 class="text-xl font-semibold text-yellow-400 mb-2">PROFESSIONAL</h3>
+                    <div class="flex justify-center items-baseline mb-6">
+                        <span class="text-4xl font-bold">₹2000</span>
+                    </div>
+                    <ul class="text-left space-y-4 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-500 mr-2"></i> <span class="font-bold text-white">Everything in MAX</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-500 mr-2"></i> GitHub Actions (CI/CD)</li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-500 mr-2"></i> Advanced Security Features</li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-500 mr-2"></i> <span class="text-white bg-indigo-900/50 px-2 rounded">Copilot AI Mastery</span></li>
+                        <li class="flex items-center"><i class="fas fa-check text-yellow-500 mr-2"></i> Team & Org Management</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-white font-bold shadow-lg shadow-yellow-500/20 transition-all">
+                        Go Pro
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-800 bg-gray-900/50 py-12 text-center text-gray-500 text-sm">
+        <p>© 2024 GitMastery Course. Not affiliated with GitHub Inc.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
